@@ -10,7 +10,11 @@ namespace Senai.Senatur.WebApi.Interfaces
     {
         List<Pacotes> ListarPacotes();
 
-        void CadastrarPacote(Pacotes pacote);
+        void CadastrarPacote(Pacotes pacoteAtualizado);
+
+        Pacotes BuscarPorId(int id);
+
+        void AtualizarPacote(Pacotes novoPacote, int id);
 
     }
 }

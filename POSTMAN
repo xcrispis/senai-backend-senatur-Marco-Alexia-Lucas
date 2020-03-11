@@ -1,45 +1,223 @@
 {
 	"info": {
-		"_postman_id": "b1230558-4244-4baa-a733-01af74ef589e",
-		"name": "Se",
+		"_postman_id": "7c785c90-485d-447f-a7b2-61d23f09f92a",
+		"name": "Senatur",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "http://localhost:5000/api/Login",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"email\": \"admin@admin.com\",\n\t\"senha\": \"admin\"\n\t}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Login",
+			"item": [
+				{
+					"name": "http://localhost:5000/api/Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"admin@admin.com\",\n\t\"senha\": \"admin\"\n\t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Login"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:5000/api/Login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"api",
-						"Login"
-					]
+				{
+					"name": "http://localhost:5000/api/Login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Login"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pacotes",
+			"item": [
+				{
+					"name": "http://localhost:5000/api/Pacotes/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzOTMwMzk2LCJpc3MiOiJQZW9wbGVzLldlYkFwaSIsImF1ZCI6IlBlb3BsZXMuV2ViQXBpIn0.Y88Hu6QHs-wRxBhQjWq_GrXq_YATMX-t1mn5X2iM31c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Pacotes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Pacotes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/api/Pacotes/1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPacote\": 1,\r\n    \"nomePacote\": \"SALVADOR - 5 DIAS / 4 DIÁRIAS\",\r\n    \"descricao\": \"- O que não falta em Salvador são atrações. \\r\\nProva disso são as praias, os\\r\\nmuseus e as construções seculares que dão um charme mais que especial à região. A\\r\\ncidade, sinônimo de alegria, também é conhecida pela efervescência cultural que a\\r\\ncredenciou como um dos destinos mais procurados por turistas brasileiros e\\r\\nestrangeiros. O Pelourinho e o Elevador são alguns dos principais pontos de visitação.\",\r\n    \"dataIda\": \"2020-08-06T00:00:00\",\r\n    \"dataVolta\": \"2020-08-10T00:00:00\",\r\n    \"valor\": 854.0,\r\n    \"idCidade\": 2,\r\n    \"ativo\": true,\r\n    \"idCidadeNavigation\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Pacotes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Pacotes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/api/Pacotes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzOTMwNjgxLCJpc3MiOiJQZW9wbGVzLldlYkFwaSIsImF1ZCI6IlBlb3BsZXMuV2ViQXBpIn0.6iBvwN4mE-WgFnV6mKZJCEJvOmlDudJBh-8chFdQZHc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomePacote\": \"PERNAMBUCO - 3 DIAS / 5 DIÁRIAS\",\r\n    \"descricao\": \"- O que não falta em Salvador são atrações. \\r\\nProva disso são as praias, os\\r\\nmuseus e as construções seculares que dão um charme mais que especial à região. A\\r\\ncidade, sinônimo de alegria, também é conhecida pela efervescência cultural que a\\r\\ncredenciou como um dos destinos mais procurados por turistas brasileiros e\\r\\nestrangeiros. O Pelourinho e o Elevador são alguns dos principais pontos de visitação.\",\r\n    \"dataIda\": \"2020-08-06T00:00:00\",\r\n    \"dataVolta\": \"2020-08-10T00:00:00\",\r\n    \"valor\": 700.0,\r\n    \"idCidade\": 1,\r\n    \"ativo\": true,\r\n    \"idCidadeNavigation\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Pacotes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Pacotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/api/Pacotes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Pacotes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Pacotes"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Usuário",
+			"item": [
+				{
+					"name": "http://localhost:5000/api/Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuario"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}

@@ -9,3 +9,9 @@ CREATE TABLE Pacotes (IdPacote INT IDENTITY PRIMARY KEY, NomePacote varchar(255)
 
 CREATE TABLE Usuario (IdUsuario INT IDENTITY PRIMARY KEY, Email varchar(255), Senha nvarchar(30), IdTipoUsuario INT FOREIGN KEY REFERENCES TipoUsuario(IdTipoUsuario))
  
+
+ SELECT Usuario.IdUsuario, Usuario.Email, TipoUsuario.Nome FROM Usuario
+ INNER JOIN TipoUsuario ON TipoUsuario.IdTipoUsuario = Usuario.IdTipoUsuario;
+
+ SELECT * FROM Usuario;
+ SELECT * FROM Pacotes;

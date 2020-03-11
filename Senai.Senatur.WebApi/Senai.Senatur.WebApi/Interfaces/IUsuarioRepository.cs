@@ -10,5 +10,7 @@ namespace Senai.Senatur.WebApi.Interfaces
     {
         Usuario Logar(string email, string senha);
 
+        List<Usuario> Listarusuario();
     }
+
 }

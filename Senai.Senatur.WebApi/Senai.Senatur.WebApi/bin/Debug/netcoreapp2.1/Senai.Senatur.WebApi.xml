@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senai.Senatur.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Senai.Senatur.WebApi.Controllers.LoginController.Post(Senai.Senatur.WebApi.ViewModels.LoginViewModel)">
+            <summary>
+            
+            </summary>
+            <param name="login"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.ListaPacote">
+            <summary>
+            Método que lista todos os pacotes
+            </summary>
+            <returns>uma lista de pacotes</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.BuscarPorId(System.Int32)">
+            <summary>
+            Método que busca um pacote pelo seu identificador
+            </summary>
+            <param name="id">Identificador que será buscado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.AtualizaPacote(Senai.Senatur.WebApi.Domains.Pacotes,System.Int32)">
+            <summary>
+            Método que atualiza pacote pelo seu identificador
+            </summary>
+            <param name="pacoteAtualizado">Objeto que será atualizado</param>
+            <param name="id">Idetificador que será buscado para atualizar</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.Cadastrar(Senai.Senatur.WebApi.Domains.Pacotes)">
+            <summary>
+             Métofo que cadastra um novo Pacote
+            </summary>
+            <param name="pacotenovo">Objeto que será cadastrado</param>
+            <returns>returna um novoPacote cadastrado</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.UsuarioController.Get">
+            <summary>
+            Método que mostra uma lista de usuários
+            </summary>
+            <returns>retorna uma lista</returns>
+        </member>
+    </members>
+</doc>

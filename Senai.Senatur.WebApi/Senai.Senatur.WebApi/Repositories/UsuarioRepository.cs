@@ -1,4 +1,5 @@
-﻿using Senai.Senatur.WebApi.Domains;
+﻿using Microsoft.EntityFrameworkCore;
+using Senai.Senatur.WebApi.Domains;
 using Senai.Senatur.WebApi.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,11 @@ namespace Senai.Senatur.WebApi.Repositories
     {
 
         SenaturContext ctx = new SenaturContext();
+
+        public List<Usuario> Listarusuario()
+        {
+            return ctx.Usuario.Include(u => u.IdTipoUsuarioNavigation).ToList();
+        }
 
         public Usuario Logar(string email, string senha)
         {
