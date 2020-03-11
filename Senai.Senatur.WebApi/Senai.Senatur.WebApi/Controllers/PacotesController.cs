@@ -80,5 +80,12 @@ namespace Senai.Senatur.WebApi.Controllers
 
             return StatusCode(201, new { menssagem = "Pacote cadastrado com sucesso"});
         }
+
+        [Authorize (Roles = "1, 2")]
+        [HttpGet]
+        public IActionResult BuscarAtivos(bool Ativo)
+        {
+            return Ok(_pacotesRepository.BuscarAtivos(Ativo));
+        }
     }
 }

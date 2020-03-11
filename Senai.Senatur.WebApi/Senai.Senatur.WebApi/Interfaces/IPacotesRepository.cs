@@ -16,5 +16,9 @@ namespace Senai.Senatur.WebApi.Interfaces
 
         void AtualizarPacote(Pacotes novoPacote, int id);
 
+        List<Pacotes> BuscarAtivos(bool Ativo);
+
+
+
     }
 }
